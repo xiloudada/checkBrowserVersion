@@ -1,13 +1,11 @@
 'use client'
 import {useEffect, useState} from "react";
-import VConsole from "vconsole";
 
 
 export default function Home() {
     const [value, setValue] = useState('')
 
     useEffect(() => {
-        const vConsole = new VConsole()
         const isServer = typeof window === 'undefined'
         const userAgent = navigator.userAgent;
         if (!isServer && userAgent){
@@ -47,10 +45,6 @@ export default function Home() {
                 console.log("无法识别的浏览器");
                 setValue("无法识别的浏览器")
             }
-        }
-
-        return () =>{
-            vConsole.destroy()
         }
     },[])
 
