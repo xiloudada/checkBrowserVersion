@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // output: "export",
-    // reactStrictMode: true,
-    // compress: true,
+    output: "export",
+    distDir: 'build',
+    reactStrictMode: true,
+    compress: true,
     // basePath:'/',
     // assetPrefix:'/'
     // publicRuntimeConfig:'/'
